@@ -19,13 +19,20 @@ public class Banco {
         this.clientes = new ArrayList<>();
         this.cuentas = new ArrayList<>();
     }
-    
-    public void agregarCliente(Cliente cliente){
-        clientes.add(cliente);
+  
+     public void crearCliente(String nombre, int documento)throws IllegalArgumentException{
+         Cliente a= new Cliente(nombre,documento);
+        clientes.add(a);
     }
     
-    public void agregarente(Cliente cliente){
-        clientes.add(cliente);
+    public void crearAdministrador(String nombre, int No_Admin){
+        Administrador administrador = new Administrador(nombre,No_Admin);
+        admins.add(administrador);
+    }
+    
+    public void agregarCuentas(int id, double credito, Cliente dueño) throws IllegalArgumentException{
+        Cuenta cuenta = new Cuenta(id,credito,dueño);
+        cuentas.add(cuenta);
     }
     
     

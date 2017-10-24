@@ -16,7 +16,9 @@ public class Administrador extends Persona {
         this.clientes = new ArrayList<>();
     }
     
-    
+    public void agregarCliente(Cliente cliente){
+        clientes.add(cliente);
+    }
     
     
 }
