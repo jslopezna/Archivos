@@ -18,7 +18,14 @@ public class Banco {
         this.admins = new ArrayList<>();
         this.clientes = new ArrayList<>();
         this.cuentas = new ArrayList<>();
-        Cliente cliente = new Cliente();
+    }
+    
+    public void agregarCliente(Cliente cliente){
+        clientes.add(cliente);
+    }
+    
+    public void agregarente(Cliente cliente){
+        clientes.add(cliente);
     }
     
     
