@@ -19,7 +19,7 @@ public class Trabajo {
             System.out.println("error");
         };
         
-        b.crearCliente("a",x);
+        //b.crearCliente("a",x);
         a.addAdmin(c);
         //System.out.println(a.getAdmin().toString());
     }
