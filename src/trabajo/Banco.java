@@ -21,16 +21,16 @@ public class Banco {
     }
   
      public void crearCliente(String nombre, int documento)throws IllegalArgumentException{
-         Cliente a= new Cliente(nombre,documento);
+        Cliente a= new Cliente(nombre,documento);
         clientes.add(a);
     }
     
-    public void crearAdministrador(String nombre, int No_Admin){
+    public void crearAdministrador(String nombre, int No_Admin) throws IllegalArgumentException{
         Administrador administrador = new Administrador(nombre,No_Admin);
         admins.add(administrador);
     }
     
-    public void agregarCuentas(int id, double credito, Cliente dueño) throws IllegalArgumentException{
+    public void crearCuentas(int id, double credito, Cliente dueño) throws IllegalArgumentException{
         Cuenta cuenta = new Cuenta(id,credito,dueño);
         cuentas.add(cuenta);
     }

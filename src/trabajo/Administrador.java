@@ -1,5 +1,4 @@
 package trabajo;
-
 import java.util.ArrayList;
 
 /*
@@ -16,7 +15,7 @@ public class Administrador extends Persona {
         this.clientes = new ArrayList<>();
     }
     
-    public void agregarCliente(Cliente cliente){
+    public void agregarCliente(Cliente cliente) throws IllegalArgumentException {
         clientes.add(cliente);
     }    
 }
