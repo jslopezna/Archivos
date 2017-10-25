@@ -18,7 +18,5 @@ public class Administrador extends Persona {
     
     public void agregarCliente(Cliente cliente){
         clientes.add(cliente);
-    }
-    
-    
+    }    
 }

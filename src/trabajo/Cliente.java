@@ -16,7 +16,7 @@ public class Cliente extends Persona{
         this.cuentas = new ArrayList <>();
     }
 
-    public void addAdmin (Administrador admin){
+    public void addAdmin (Administrador admin) throws IllegalArgumentException {
         this.admin = admin;
     }
 }
