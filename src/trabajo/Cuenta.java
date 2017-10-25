@@ -1,4 +1,6 @@
 package trabajo;
+import java.util.InputMismatchException;
+
 /*
  * @autores Aldo Marquez, Mateo Pacheco, Luis Suarez, Juan Esteban Muñoz
  */
@@ -7,7 +9,7 @@ public class Cuenta {
     private double credito;
     private Cliente dueño;
     
-    public Cuenta (int id, double credito, Cliente dueño){
+    public Cuenta (int id, double credito, Cliente dueño) throws InputMismatchException{
         this.id = id;
         this.credito = credito;
         this.dueño = dueño;

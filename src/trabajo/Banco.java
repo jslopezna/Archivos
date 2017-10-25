@@ -1,6 +1,5 @@
 package trabajo;
-
-import java.util.ArrayList;
+import java.util.*;
 /*
  * @autores Aldo Marquez, Mateo Pacheco, Luis Suarez, Juan Esteban Muñoz
  */
@@ -12,7 +11,7 @@ public class Banco {
     private ArrayList<Cliente> clientes;
     private Cliente cliente;
 
-    public Banco(String Nombre, int id) {
+    public Banco(String Nombre, int id) throws InputMismatchException{
         this.Nombre = Nombre;
         this.id = id;
         this.admins = new ArrayList<>();
@@ -20,17 +19,17 @@ public class Banco {
         this.cuentas = new ArrayList<>();
     }
   
-     public void crearCliente(String nombre, int documento)throws IllegalArgumentException{
+     public void crearCliente(String nombre, int documento)throws InputMismatchException{
         Cliente a= new Cliente(nombre,documento);
         clientes.add(a);
     }
     
-    public void crearAdministrador(String nombre, int No_Admin) throws IllegalArgumentException{
+    public void crearAdministrador(String nombre, int No_Admin) throws InputMismatchException{
         Administrador administrador = new Administrador(nombre,No_Admin);
         admins.add(administrador);
     }
     
-    public void crearCuentas(int id, double credito, Cliente dueño) throws IllegalArgumentException{
+    public void crearCuentas(int id, double credito, Cliente dueño) throws InputMismatchException{
         Cuenta cuenta = new Cuenta(id,credito,dueño);
         cuentas.add(cuenta);
     }

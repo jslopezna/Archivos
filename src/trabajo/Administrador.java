@@ -1,5 +1,5 @@
 package trabajo;
-import java.util.ArrayList;
+import java.util.*;
 
 /*
  * @autores Aldo Marquez, Mateo Pacheco, Luis Suarez, Juan Esteban Muñoz
@@ -15,7 +15,7 @@ public class Administrador extends Persona {
         this.clientes = new ArrayList<>();
     }
     
-    public void agregarCliente(Cliente cliente) throws IllegalArgumentException {
+    public void agregarCliente(Cliente cliente) throws InputMismatchException {
         clientes.add(cliente);
     }    
 }

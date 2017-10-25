@@ -26,5 +26,4 @@ public class Trabajo {
         //a.addAdmin(c);
         //System.out.println(a.getAdmin().toString());
     }
-    
 }
