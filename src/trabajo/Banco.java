@@ -6,32 +6,32 @@ import java.util.*;
 public class Banco {
     private String Nombre;
     private int id;
-    private ArrayList<Administrador> admins;
-    private ArrayList<Cuenta> cuentas ;
-    private TreeMap< Integer, Cliente> clientes;
+    public TreeMap<Integer, Administrador> admins;
+    public TreeMap<Integer, Cuenta> cuentas ;
+    public TreeMap< Integer, Cliente> clientes;
     private Cliente cliente;
 
     public Banco(String Nombre, int id) throws InputMismatchException{
         this.Nombre = Nombre;
         this.id = id;
-        this.admins = new ArrayList<>();
+        this.admins = new TreeMap<>();
         this.clientes = new TreeMap<>();
-        this.cuentas = new ArrayList<>();
+        this.cuentas = new TreeMap<>();
     }
   
      public void crearCliente(String nombre, int documento)throws InputMismatchException{
-        Cliente a = new Cliente(nombre, documento);
-        clientes.put(a.getDocumento(), a);
+        Cliente c = new Cliente(nombre, documento);
+        clientes.put(c.getDocumento(), c);
     }
     
     public void crearAdministrador(String nombre, int No_Admin) throws InputMismatchException{
-        Administrador administrador = new Administrador(nombre,No_Admin);
-        admins.add(administrador);
+        Administrador a = new Administrador(nombre,No_Admin);
+        admins.put(a.getNo_Admin(), a);
     }
     
     public void crearCuentas(int id, double credito, Cliente dueño) throws InputMismatchException{
-        Cuenta cuenta = new Cuenta(id,credito,dueño);
-        cuentas.add(cuenta);
+        Cuenta cu = new Cuenta(id,credito,dueño);
+        cuentas.put(cu.getId(), cu);
     }
     
     
