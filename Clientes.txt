@@ -1,4 +1,1 @@
-Cliente,Leonardo,987654321,null,[],
-Cliente,Donatello,123456789,null,[],
-Cliente,Leonardo,987654321,null,[],
-Cliente,Donatello,123456789,null,[],
+{123456789=Cliente,Donatello,123456789,Administrador,Jorge,123,[Leonardo, Donatello].,[],, 987654321=Cliente,Leonardo,987654321,Administrador,Jorge,123,[Leonardo, Donatello].,[Cuenta,0,0.0,Leonardo,987654321,],}

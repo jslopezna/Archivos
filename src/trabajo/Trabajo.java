@@ -1,4 +1,5 @@
 package trabajo;
+
 import java.io.IOException;
 import java.util.*;
 import java.util.Scanner;
@@ -11,38 +12,49 @@ import java.util.logging.Logger;
 public class Trabajo {
 
     public static void main(String[] args) throws IOException {
-        
+
         Scanner s = new Scanner(System.in);
-        
+
         //Cliente a = new Cliente("", 1);
-        Banco b = new Banco("Banco de Hierro",1234);
+        Banco b = new Banco("Banco de Hierro", 1234);
         //Administrador c = new Administrador ("C", 2);
-        
-        try { b.crearCliente("Leonardo", 987654321);
-        } catch(InputMismatchException e){
-            System.out.println(" NO FUE POSIBLE CREAR EL CLIENTE");
-        }    
-        
-        try { b.crearCliente("Donatello", 123456789);
-        } catch(InputMismatchException e){
-            System.out.println(" NO FUE POSIBLE CREAR EL CLIENTE");
-        }   
-  
-        try {
-            int id = 0;
-            double credito = 0.0; 
-            b.crearCuentas(id, credito, b.clientes.get(987654321));
-        } catch(InputMismatchException e){
-            System.out.println(" NO FUE POSIBLE CREAR LA CUENTA ");
-        }   
+
         try {
             b.crearAdministrador("Jorge", 123);
-            b.admins.get(123).agregarCliente(b.clientes.get(987654321));
-        } catch(InputMismatchException e){
+        } catch (InputMismatchException e) {
             System.out.println(" NO FUE POSIBLE CREAR EL ADMINISTRADOR ");
-        }   
+        }
+
+        try {
+            b.crearCliente("Leonardo", 987654321);
+        } catch (InputMismatchException e) {
+            System.out.println(" NO FUE POSIBLE CREAR EL CLIENTE");
+        }
+
+        try {
+            b.crearCliente("Donatello", 123456789);
+        } catch (InputMismatchException e) {
+            System.out.println(" NO FUE POSIBLE CREAR EL CLIENTE");
+        }
+int id = 0;
+        try {
+            
+            double credito = 0.0;
+            b.crearCuentas(id, credito, b.clientes.get(987654321));
+        } catch (InputMismatchException e) {
+            System.out.println(" NO FUE POSIBLE CREAR LA CUENTA ");
+        }
+
+        b.admins.get(123).agregarCliente(b.clientes.get(987654321));
+        b.admins.get(123).agregarCliente(b.clientes.get(123456789));
         
+        b.clientes.get(987654321).addAdmin(b.admins.get(123));
+        b.clientes.get(123456789).addAdmin(b.admins.get(123));
         
+        b.clientes.get(987654321).addCuentas(b.cuentas.get(id));
+
+        b.guardarTodo();
+
         /*int x = 0;
         try { x = s.nextInt();
         } catch(InputMismatchException e){

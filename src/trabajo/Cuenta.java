@@ -11,7 +11,7 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        return "Cuenta," + id + "," + credito + "," + dueño;
+        return "Cuenta," + id + "," + credito + "," + dueño.getNombre() + "," + dueño.getDocumento() + ",";
     }
     
     public Cuenta (int id, double credito, Cliente dueño) throws InputMismatchException{

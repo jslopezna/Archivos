@@ -11,7 +11,11 @@ public class Administrador extends Persona {
 
     @Override
     public String toString() {
-        return "Administrador," + No_Admin + "," + clientes +",";
+        ArrayList<String> nombres = new ArrayList<>();
+        for(Cliente c: clientes){
+            nombres.add(c.getNombre());
+        }
+        return "Administrador," + nombre + "," + No_Admin + "," + nombres +"." + "," ;
     }
     
     public Administrador (String nombre, int No_Admin){

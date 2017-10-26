@@ -1,2 +1,1 @@
-Cuenta,0,0.0,Cliente,Leonardo,987654321,null,[],,
-Cuenta,0,0.0,Cliente,Leonardo,987654321,null,[],
+{0=Cuenta,0,0.0,Leonardo,987654321,}

@@ -9,5 +9,9 @@ public abstract class Persona {
     public Persona(String nombre) throws IllegalArgumentException {
         this.nombre = nombre;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
     
 }

@@ -12,7 +12,7 @@ public class Cliente extends Persona{
 
     @Override
     public String toString() {
-        return "Cliente," + nombre + "," + documento + "," + admin + "," + cuentas+",";
+        return "Cliente," + nombre + "," + documento + "," + admin + cuentas+",";
     }
     
     public Cliente(String nombre, int documento) {
