@@ -12,7 +12,7 @@ public class Cliente extends Persona{
 
     @Override
     public String toString() {
-        return "Cliente," + nombre + "," + documento + "," + admin + "," + cuentas;
+        return "Cliente," + nombre + "," + documento + "," + admin + "," + cuentas+",";
     }
     
     public Cliente(String nombre, int documento) {
@@ -28,5 +28,15 @@ public class Cliente extends Persona{
     public void addAdmin (Administrador admin) throws IllegalArgumentException {
         this.admin = admin;
     }
+
+    public int getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(int documento) {
+        this.documento = documento;
+    }
+    
+    
 }
 

@@ -7,31 +7,33 @@ import java.util.*;
 public class Banco {
     private String Nombre;
     private int id;
-    private ArrayList<Administrador> admins;
-    private ArrayList<Cuenta> cuentas ;
-    private ArrayList<Cliente> clientes;
-    
+    public TreeMap<Integer, Administrador> admins;
+    public TreeMap<Integer, Cuenta> cuentas ;
+    public TreeMap< Integer, Cliente> clientes;
+    private Cliente cliente;
 
     public Banco(String Nombre, int id) throws InputMismatchException{
         this.Nombre = Nombre;
         this.id = id;
-        this.admins = new ArrayList<>();
-        this.clientes = new ArrayList<>();
-        this.cuentas = new ArrayList<>();
+        this.admins = new TreeMap<>();
+        this.clientes = new TreeMap<>();
+        this.cuentas = new TreeMap<>();
     }
   
+
      public void crearCliente(String nombre, int documento)throws InputMismatchException, FileNotFoundException, IOException{
-        Cliente a= new Cliente(nombre,documento);
+        Cliente c= new Cliente(nombre,documento);
         File f = new File("Clientes.txt");
         if(!(f.exists())){
             f.createNewFile();
         }
         PrintWriter guardar = new PrintWriter(new FileWriter(f, true));
-        guardar.println(a);
+        guardar.println(c);
         guardar.close();
-        clientes.add(a);
-    }
+        clientes.put(c.getDocumento(), c);
+     }
     
+
     public void crearAdministrador(String nombre, int No_Admin) throws InputMismatchException, FileNotFoundException, IOException{
         Administrador administrador = new Administrador(nombre,No_Admin);
         File f = new File("Administradores.txt");
@@ -41,9 +43,10 @@ public class Banco {
         PrintWriter guardar = new PrintWriter(new FileWriter(f, true));
         guardar.println(administrador);
         guardar.close();
-        admins.add(administrador);
+        admins.put(administrador.getNo_Admin(), administrador);
     }
-    
+
+
     public void crearCuentas(int id, double credito, Cliente dueño) throws InputMismatchException, FileNotFoundException, IOException{
         Cuenta cuenta = new Cuenta(id,credito,dueño);
         File f = new File("Cuentas.txt");
@@ -53,8 +56,9 @@ public class Banco {
         PrintWriter guardar = new PrintWriter(new FileWriter(f, true));
         guardar.println(cuenta);
         guardar.close();
-        cuentas.add(cuenta);
+        cuentas.put(cuenta.getId(), cuenta);
     }
-    
-    
 }
+    
+    
+
