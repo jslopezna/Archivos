@@ -59,11 +59,9 @@ public class Banco {
 
                 String nombre = sc.next().trim();
                 String documento = sc.next().trim();
-                sc.next("Administrador");
                 sc.next();
                 String admin_No = sc.next();
-                sc.next(".");
-
+                
                 int d = 0;
                 d = Integer.parseInt(documento);
                 int ad = 0;
@@ -187,15 +185,15 @@ public class Banco {
             c.createNewFile();
         }
 
-        PrintWriter adm = new PrintWriter(new FileWriter(a, true));
+        PrintWriter adm = new PrintWriter(new FileWriter(a, false));
         adm.println(admins);
         adm.close();
 
-        PrintWriter cuen = new PrintWriter(new FileWriter(cu, true));
+        PrintWriter cuen = new PrintWriter(new FileWriter(cu, false));
         cuen.println(cuentas);
         cuen.close();
 
-        PrintWriter cli = new PrintWriter(new FileWriter(c, true));
+        PrintWriter cli = new PrintWriter(new FileWriter(c, false));
         cli.println(clientes);
         cli.close();
     }
