@@ -32,7 +32,5 @@ public class Banco {
     public void crearCuentas(int id, double credito, Cliente dueño) throws InputMismatchException{
         Cuenta cu = new Cuenta(id,credito,dueño);
         cuentas.put(cu.getId(), cu);
-    }
-    
-    
+    }  
 }
