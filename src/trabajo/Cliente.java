@@ -19,5 +19,15 @@ public class Cliente extends Persona{
     public void addAdmin (Administrador admin) throws IllegalArgumentException {
         this.admin = admin;
     }
+
+    public int getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(int documento) {
+        this.documento = documento;
+    }
+    
+    
 }
 

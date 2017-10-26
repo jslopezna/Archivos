@@ -8,11 +8,12 @@ import java.util.Scanner;
 public class Trabajo {
 
     public static void main(String[] args) {
+        
         Scanner s = new Scanner(System.in);
         
-        Cliente a = new Cliente("A", 1);
-        Banco b = new Banco("Bancolombia",1);
-        Administrador c = new Administrador ("C", 2);
+        //Cliente a = new Cliente("", 1);
+        Banco b = new Banco("Banco de Hierro",1234);
+        //Administrador c = new Administrador ("C", 2);
         
         System.out.println("Ingrese el Número de Documento del Cliente");
         int x = 0;
@@ -21,8 +22,9 @@ public class Trabajo {
             System.out.println("El Número de Documento sólo puede estar compuesto por números enteros");
         }    
         
-        b.crearCliente("a",x);
-        
+        b.crearCliente("Katrina",x);
+        b.crearCliente("Leonardo", 987654321);
+        b.crearCliente("Donatello", 123456789);
         //a.addAdmin(c);
         //System.out.println(a.getAdmin().toString());
     }
