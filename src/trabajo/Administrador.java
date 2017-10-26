@@ -18,4 +18,9 @@ public class Administrador extends Persona {
     public void agregarCliente(Cliente cliente) throws InputMismatchException {
         clientes.add(cliente);
     }    
+
+    public int getNo_Admin() {
+        return No_Admin;
+    }
+    
 }

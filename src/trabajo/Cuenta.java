@@ -14,5 +14,9 @@ public class Cuenta {
         this.credito = credito;
         this.dueño = dueño;
     }
+
+    public int getId() {
+        return id;
+    }
     
 }
