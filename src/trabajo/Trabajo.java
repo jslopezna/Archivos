@@ -15,7 +15,6 @@ public class Trabajo {
         Banco b = new Banco("Banco de Hierro",1234);
         //Administrador c = new Administrador ("C", 2);
         
-       
         try { b.crearCliente("Leonardo", 987654321);
         } catch(InputMismatchException e){
             System.out.println(" NO FUE POSIBLE CREAR EL CLIENTE");
