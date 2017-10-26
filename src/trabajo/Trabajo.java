@@ -15,20 +15,22 @@ public class Trabajo {
         Banco b = new Banco("Banco de Hierro",1234);
         //Administrador c = new Administrador ("C", 2);
         
-        /*System.out.println("Ingrese el Número de Documento del Cliente");
-        int x = 0;
-        try { x = s.nextInt();
+       
+        try { b.crearCliente("Leonardo", 987654321);
         } catch(InputMismatchException e){
-            System.out.println("El Número de Documento sólo puede estar compuesto por números enteros");
+            System.out.println(" NO FUE POSIBLE CREAR EL CLIENTE");
         }    
         
-        b.crearCliente("Katrina",x);*/
-        b.crearCliente("Leonardo", 987654321);
-        b.crearCliente("Donatello", 123456789);
+        try { b.crearCliente("Donatello", 123456789);
+        } catch(InputMismatchException e){
+            System.out.println(" NO FUE POSIBLE CREAR EL CLIENTE");
+        }   
   
         int id = 0;
         double credito = 0.0; 
         b.crearCuentas(id, credito, b.clientes.get(987654321));
+        
+        
         
         /*int x = 0;
         try { x = s.nextInt();
