@@ -1,5 +1,6 @@
 package trabajo;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 import java.util.Scanner;
@@ -20,7 +21,7 @@ public class Trabajo {
         //Administrador c = new Administrador ("C", 2);
 
         try {
-            b.crearAdministrador("Jorge", 123);
+            b.crearAdministrador( "Jorge", 123);
         } catch (InputMismatchException e) {
             System.out.println(" NO FUE POSIBLE CREAR EL ADMINISTRADOR ");
         }
@@ -44,9 +45,12 @@ int id = 0;
         } catch (InputMismatchException e) {
             System.out.println(" NO FUE POSIBLE CREAR LA CUENTA ");
         }
-
+        try{
         b.admins.get(123).agregarCliente(b.clientes.get(987654321));
-        b.admins.get(123).agregarCliente(b.clientes.get(123456789));
+        }catch(InputMismatchException e){
+          System.out.println(" NO se ecncontro cliente ");  
+        }
+        b.admins.get(123).agregarCliente(b.clientes.get(123456789));    
         
         b.clientes.get(987654321).addAdmin(b.admins.get(123));
         b.clientes.get(123456789).addAdmin(b.admins.get(123));
